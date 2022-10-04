@@ -14,11 +14,11 @@ public:
 
     ListNode *it = head;
     while (it && it->next) {
-        if (it->val == it->next->val) {
-            it->next = it->next->next;
-        } else {
-            it = it->next;
-        }
+      if (it->val == it->next->val) {
+        it->next = it->next->next;
+      } else {
+        it = it->next;
+      }
     }
     return head;
   }
