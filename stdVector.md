@@ -3,14 +3,14 @@
      
 ## iterate through vector     
      
-Cpp 95 Style    
+C++03 Style    
 ```    
 for(int i=0; i < vector.size(); i++){    
    vector[i].doSomething();    
 }    
 ```    
      
-C++11
+C++11 Style
 ```    
 for (auto it = begin (vector); it != end (vector); ++it) {    
     it->doSomething ();    
@@ -23,6 +23,8 @@ for (auto & element : vector) {
 }    
 ```
 or 
+
+**preferred**
 ```
 for(std::vector<T>::iterator it = v.begin(); it != v.end(); ++it) {
     it->doSomething();
