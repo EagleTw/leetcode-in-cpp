@@ -3,7 +3,6 @@
      
 ## iterate through vector     
      
-```    
 Cpp 95 Style    
 ```    
 for(int i=0; i < vector.size(); i++){    
@@ -22,3 +21,4 @@ or
 for (auto & element : vector) {    
     element.doSomething ();    
 }    
+```
