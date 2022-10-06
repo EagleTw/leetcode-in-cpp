@@ -3,14 +3,14 @@
      
 ## iterate through vector     
      
-C++03 Style    
+C++03 Style --> size
 ```    
 for(int i=0; i < vector.size(); i++){    
    vector[i].doSomething();    
 }    
 ```    
      
-C++11 Style
+C++11 Style --> iterator
 ```    
 for (auto it = begin (vector); it != end (vector); ++it) {    
     it->doSomething ();    
