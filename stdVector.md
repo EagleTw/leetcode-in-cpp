@@ -22,9 +22,7 @@ for (auto & element : vector) {
     element.doSomething ();    
 }    
 ```
-or 
-
-**preferred**
+or **preferred**
 ```
 for(std::vector<T>::iterator it = v.begin(); it != v.end(); ++it) {
     it->doSomething();
