@@ -1,7 +1,11 @@
 # Bitwise Operation Techniques
 
+## Links
+
+[Jserv Bitwise Operation](https://hackmd.io/@sysprog/c-bitwise)
+
 ## 1. Set nth bit of integer x
-`x | (1<<n)`
+```x | (1<<n)```
 Example
 ```
 #include<stdio.h>
@@ -16,7 +20,7 @@ int main()
 ```
 
 ## 2. Unset nth bit of integer x
-`x & ~(1<<n)`
+```x & ~(1<<n)```
 Example
 
 ```
@@ -31,7 +35,7 @@ int main()
 }
 ```
 ## 3. Toggle nth bit of x
-`x ^ (1<<n)`
+```x ^ (1<<n)```
 Example
 ```
 #include<stdio.h>
@@ -47,7 +51,7 @@ int main()
 }
 ```
 ## 4. Multiply integer x by the nth power of 2
-`x << n`
+```x << n```
 Example
 ```
 #include<stdio.h>
@@ -61,7 +65,7 @@ int main()
 }
 ```
 5. Divide integer x by the nth power of 2
-`x >> n;`
+```x >> n;```
 Example
 ```
 #include<stdio.h>
@@ -75,7 +79,7 @@ int main()
 }
 ```
 ## 6. Check equality of two integer
-`(num1 ^ num2) == 0; // num1 == num2`
+```(num1 ^ num2) == 0; // num1 == num2```
 Example
 ```
 #include<stdio.h>
@@ -91,7 +95,7 @@ int main()
 }
 ```
 ## 7. Check if an integer number is odd
-`(num & 1) == 1`
+```(num & 1) == 1```
 Example
 ```
 #include<stdio.h>
@@ -141,7 +145,7 @@ int main()
 }
 ```
 ## 9. Get the max of two integer values
-`b & ((a-b) >> 31) | a & (~(a-b) >> 31);`
+```b & ((a-b) >> 31) | a & (~(a-b) >> 31);```
 Example
 
 ```
@@ -158,7 +162,7 @@ int main()
 }
 ```
 ## 10. Get the min of two integer values
-`a & ((a-b) >> 31) | b & (~(a-b) >> 31);`
+```a & ((a-b) >> 31) | b & (~(a-b) >> 31);```
 Example
 ```
 #include<stdio.h>
@@ -174,7 +178,7 @@ int main()
 }
 ```
 ## 11. Check whether both integer numbers have the same sign
-`(num1 ^ num2) >= 0;`
+```(num1 ^ num2) >= 0;```
 Example
 ```
 #include<stdio.h>
@@ -192,7 +196,7 @@ int main()
 }
 ```
 ## 12. Flip the sign of an integer number
-`num = ~num + 1;`
+```num = ~num + 1;```
 Example
 ```
 #include<stdio.h>
@@ -207,7 +211,7 @@ int main()
 }
 ```
 ## 13. Check whether a integer number is power of 2
-`num > 0 && (num & (num - 1)) == 0;`
+```num > 0 && (num & (num - 1)) == 0;```
 Example
 ```
 #include<stdio.h>
@@ -223,7 +227,7 @@ int main()
 }
 ```
 ## 14. Increment by 1 (num + 1)
-`-~num`
+```-~num```
 Example
 ```
 #include<stdio.h>
@@ -238,7 +242,7 @@ int main()
 }
 ```
 ## 15. Decrement by 1 (num - 1)
-`~-num`
+```~-num```
 Example
 
 ```

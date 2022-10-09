@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
         int len = digits.size();
-        
+
         ++digits[len-1];
         if (digits[len-1] < 10) {
             return digits;
