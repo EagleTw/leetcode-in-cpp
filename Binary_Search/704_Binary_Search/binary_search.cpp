@@ -1,22 +1,20 @@
-
 class Solution {
-  binarySearch(vector<int> v, int target) {
-    int l = 0;
-    int r = v.size()-1;
-    int ret = -1;
-
-    while (l <= r)
-      int mid = (l + r) / 2;
-      if (v[mid] == target) {
-        ret = mid;
-        break;
-      } else if (v[mid] < target) {
-        r = mid--;
-      } else {
-        l = mid++;
-      }
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int m = matrix[0].size();
+        int n = matrix.size();
+        int l = 0;
+        int r = m * n -1;
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            if (matrix[mid / m][mid % m] == target) {
+                return true;
+            } else if (matrix[mid / m][mid % m] < target) {
+                l = mid + 1;
+            } else {
+                r = mid - 1;
+            }
+        }
+        return false;    
     }
-
-    return ret;
-  }
 };
