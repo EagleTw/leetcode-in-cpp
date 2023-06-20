@@ -7,7 +7,7 @@ public:
     int l = 0;
     int r = m * n -1;
 
-    while (l <= r && r >= 0 && l < m * n) {
+    while (l <= r) {
       int mid = (l + r) / 2;
       if (matrix[mid / m][mid % n] == target) {
         return true;

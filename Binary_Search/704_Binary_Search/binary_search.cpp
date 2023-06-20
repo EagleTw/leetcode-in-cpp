@@ -5,7 +5,7 @@ class Solution {
     int r = v.size()-1;
     int ret = -1;
 
-    while (l <= r && l >= 0 && r < v.size()) {
+    while (l <= r)
       int mid = (l + r) / 2;
       if (v[mid] == target) {
         ret = mid;
