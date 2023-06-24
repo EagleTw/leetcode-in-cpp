@@ -1,8 +1,7 @@
 class Solution {
-public:
+ public:
   bool isAnagram(string s, string t) {
-    if (s.size() != t.size())
-        return false;
+    if (s.size() != t.size()) return false;
 
     int alphabet[26] = {0};
 
@@ -11,8 +10,7 @@ public:
     }
 
     for (int i = 0; i < t.size(); i++) {
-      if(--alphabet[t[i] - 'a'] < 0)
-        return false;
+      if (--alphabet[t[i] - 'a'] < 0) return false;
     }
     return true;
   }

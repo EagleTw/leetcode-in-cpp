@@ -10,7 +10,9 @@ struct TreeNode {
 };
 
 int diameterOfBinaryTreeHelper(struct TreeNode *root, int *maxAns) {
-  if (root == NULL) { return 0; }
+  if (root == NULL) {
+    return 0;
+  }
 
   int hL = diameterOfBinaryTreeHelper(root->left, maxAns);
   int hR = diameterOfBinaryTreeHelper(root->right, maxAns);

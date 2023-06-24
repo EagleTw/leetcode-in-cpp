@@ -9,10 +9,8 @@
  * };
  */
 class Solution {
-
-public:
+ public:
   ListNode *reverseList(ListNode *head) {
-
     if (head == nullptr) {
       return NULL;
     }

@@ -9,10 +9,9 @@ tion for singly-linked list.
   next(nullptr){} * ListNode(int x, ListNode *next) : val(x), next(next){} *
 };
 * / class Solution {
-public:
+ public:
   ListNode *partition(ListNode *head, int x) {
-    if (!head)
-      return head;
+    if (!head) return head;
 
     ListNode *dummy = new ListNode(0);
     dummy->next = head;

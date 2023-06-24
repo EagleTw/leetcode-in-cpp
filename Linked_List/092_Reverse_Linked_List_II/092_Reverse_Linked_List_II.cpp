@@ -9,12 +9,9 @@
  * };
  */
 class Solution {
-
-public:
+ public:
   ListNode *reverseBetween(ListNode *head, int left, int right) {
-
-    if (!head || !head->next)
-      return head;
+    if (!head || !head->next) return head;
 
     ListNode *dummy = new ListNode(0);
     dummy->next = head;

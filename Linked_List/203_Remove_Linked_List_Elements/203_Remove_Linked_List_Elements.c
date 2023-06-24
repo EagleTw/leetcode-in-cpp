@@ -6,18 +6,15 @@
  * };
  */
 
+struct ListNode* removeElements(struct ListNode* head, int val) {
+  struct ListNode** indirect = &head;
 
-struct ListNode* removeElements(struct ListNode* head, int val){
-
-    struct ListNode **indirect = &head;
-
-    while (*indirect) {
-        if ((*indirect)->val == val) {
-            *indirect = (*indirect)->next;
-        }
-        else {
-            indirect = &(*indirect)->next;
-        }
+  while (*indirect) {
+    if ((*indirect)->val == val) {
+      *indirect = (*indirect)->next;
+    } else {
+      indirect = &(*indirect)->next;
     }
-    return head;
+  }
+  return head;
 }

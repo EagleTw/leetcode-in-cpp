@@ -9,9 +9,8 @@
  * };
  */
 class Solution {
-public:
+ public:
   ListNode *deleteDuplicates(ListNode *head) {
-
     ListNode *it = head;
     while (it && it->next) {
       if (it->val == it->next->val) {

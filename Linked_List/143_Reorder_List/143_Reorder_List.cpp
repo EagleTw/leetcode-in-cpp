@@ -9,10 +9,8 @@
  * };
  */
 class Solution {
-
   ListNode *reverse(ListNode *head) {
-    if (!head)
-      return nullptr;
+    if (!head) return nullptr;
 
     ListNode *prev = nullptr, *curr = head, *forward = head->next;
 
@@ -28,9 +26,8 @@ class Solution {
     return head;
   }
 
-public:
+ public:
   void reorderList(ListNode *head) {
-
     int len = 0;
     for (ListNode *it = head; it != nullptr; it = it->next) {
       len++;

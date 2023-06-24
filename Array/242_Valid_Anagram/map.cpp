@@ -1,9 +1,7 @@
 class Solution {
-public:
+ public:
   bool isAnagram(string s, string t) {
-
-    if (s.size() != t.size())
-      return false;
+    if (s.size() != t.size()) return false;
 
     std::map<char, int> charMap;
 
@@ -12,8 +10,7 @@ public:
     }
     for (int i = 0; i < t.size(); i++) {
       charMap[t[i]]--;
-      if (charMap[t[i]] < 0)
-        return false;
+      if (charMap[t[i]] < 0) return false;
     }
     return true;
   }
