@@ -10,6 +10,7 @@
  * right(right) {}
  * };
  */
+
 class Solution {
 public:
   TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
@@ -30,6 +31,9 @@ private:
     TreeNode *root = new TreeNode(preorder[pre_start]);
 
     int in_off = 0;
+    // We can introduce a map to remember the position of preorder traveral
+    // so that we don't need the folloing process. We can use
+    // pos = map[preorder[pre_start]];
     for (int i = in_start; i <= in_end; i++) {
       if (inorder[i] == preorder[pre_start]) {
         break;
