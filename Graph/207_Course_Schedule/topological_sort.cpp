@@ -9,9 +9,7 @@ public:
       graph[v[0]].push_back(v[1]);
     }
 
-    // state: 0 == unknown
-    //        1 == visiting
-    //        2 == visited
+    // state: 0 == unknown, 1 == visiting, 2 == visited
     std::vector<int> state(numCourses, 0);
     for (int i = 0; i < numCourses; i++) {
       if (dfs(i, graph, state))
