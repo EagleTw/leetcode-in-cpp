@@ -5,7 +5,8 @@ public:
   std::vector<std::vector<int>> insert(std::vector<std::vector<int>> &intervals,
                                        std::vector<int> &newInterval) {
     auto it = intervals.begin();
-    while (it != intervals.end() && (*it)[0] < newInterval[0]) it++;
+    while (it != intervals.end() && (*it)[0] < newInterval[0])
+      it++;
     intervals.insert(it, newInterval);
 
     // create a extra array

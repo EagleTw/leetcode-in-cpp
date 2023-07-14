@@ -1,5 +1,5 @@
 class Solution {
- public:
+public:
   bool isPalindrome(string s) {
     int front = 0;
     int rear = s.size();
@@ -11,7 +11,8 @@ class Solution {
       while (!isalnum(s[rear]) && front < rear) {
         rear--;
       }
-      if (toupper(s[front++]) != toupper(s[rear--])) return false;
+      if (toupper(s[front++]) != toupper(s[rear--]))
+        return false;
     }
     return true;
   }

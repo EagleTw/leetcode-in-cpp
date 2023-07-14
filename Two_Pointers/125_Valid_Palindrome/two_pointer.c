@@ -2,7 +2,8 @@ bool isPalindrome(char *s) {
   char *begin, *end;
   size_t len = strlen(s);
 
-  if (len == 0) return true;
+  if (len == 0)
+    return true;
 
   begin = s;
   end = s + len - 1;
@@ -16,7 +17,8 @@ bool isPalindrome(char *s) {
       end--;
       continue;
     }
-    if (tolower(*begin++) != tolower(*end--)) return false;
+    if (tolower(*begin++) != tolower(*end--))
+      return false;
   }
 
   return true;
