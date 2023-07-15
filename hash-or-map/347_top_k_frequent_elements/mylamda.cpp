@@ -12,9 +12,15 @@ public:
       map[i]++;
     }
 
+    const auto comp = [=](std::pair<int, int> a, std::pair<int, int> b) {
+      return a.second < b.second;
+    };
+
     std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>,
-                        Compare>
-        pq;
+                        decltype(comp)>
+        pq{comp}; // "error: no matching constructor for initialization of
+                  // 'std::priority_queue"
+                  //  if the last {comp} is removed
 
     for (auto it = map.begin(); it != map.end(); it++) {
       pq.push({it->first, it->second});
@@ -27,20 +33,4 @@ public:
 
     return ans;
   }
-
-private:
-  // Notes: (Might be wrong)
-  // a, b do we need swap?
-  // if Compare(a, b) returns ture, swap, b is in front
-  // if Compare(a, b) returns false, no swap, a is in front
-  //
-  // example: decending order
-  // 5, 3 --> Compare(5,3) --> return false;
-  struct Compare {
-    // decending order
-    bool operator()(const std::pair<int, int> &a,
-                    const std::pair<int, int> &b) {
-      return a.second < b.second;
-    }
-  };
 };
