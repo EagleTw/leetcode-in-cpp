@@ -7,6 +7,7 @@
     - 1.1.1. [Prefix sum](#Prefixsum)
     - 1.1.2. [Counting sort](#Countingsort)
     - 1.1.3. [Boyer-Moore Majority Voting Algorithm](#Boyer-MooreMajorityVotingAlgorithm)
+    - 1.1.4. [Write compare function / operator / lamda](#Writecomparefunctionoperatorlamda)
 - 2. [Linked list](#Linkedlist)
 - 3. [Bitwise Operation](#BitwiseOperation)
   - 3.1. [Default need-to-know](#Defaultneed-to-know)
@@ -58,6 +59,28 @@ string strSort(string s) {
 #### 1.1.3. <a name='Boyer-MooreMajorityVotingAlgorithm'></a>Boyer-Moore Majority Voting Algorithm
 
 Finding majority element -- [[YouTube]](https://www.youtube.com/watch?v=n5QY3x_GNDg&t=274s)
+
+#### 1.1.4. <a name='Writecomparefunctionoperatorlamda'></a>Write compare function / operator / lamda
+
+> a, b ---compare---> in compare is true, need swap position
+
+- Compare operator
+
+```cpp
+struct compare {
+  inline bool operator()(std::vector<int> x, std::vector<int> y) {
+    return x[0] < y[0];
+  }
+};
+```
+
+- Compare function
+
+```cpp
+static inline bool compare(std::vector<int> x, std::vector<int> y) {
+  return x[0] < y[0];
+}
+```
 
 ## 2. <a name='Linkedlist'></a>Linked list
 
