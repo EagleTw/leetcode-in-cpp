@@ -1,3 +1,5 @@
+# Cheet sheet
+
 <!-- vscode-markdown-toc -->
 
 - 1. [Array & Two Pointer & Sliding window & Stacks](#ArrayTwoPointerSlidingwindowStacks)
@@ -11,14 +13,15 @@
 - 5. [Binary Tree](#BinaryTree)
 - 6. [Back-Tracking](#Back-Tracking)
 - 7. [BFS / DFS / Flood Fill](#BFSDFSFloodFill)
-- 8. [Hash tables](#Hashtables)
-- 9. [Union Find](#UnionFind)
+- 8. [Graph](#Graph)
+- 9. [Hash tables](#Hashtables)
+- 10. [Union Find](#UnionFind)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc --># Cheet sheet
+<!-- /vscode-markdown-toc -->
 
 ## 1. <a name='ArrayTwoPointerSlidingwindowStacks'></a>Array & Two Pointer & Sliding window & Stacks
 
@@ -119,8 +122,33 @@ bool sign = val & 0x8000; // sign bit
 
 ## 7. <a name='BFSDFSFloodFill'></a>BFS / DFS / Flood Fill
 
-## 8. <a name='Hashtables'></a>Hash tables
+## 8. <a name='Graph'></a>Graph
 
-## 9. <a name='UnionFind'></a>Union Find
+- 移動上下左右
 
-- 一個中心
+```cpp
+int dir[] = {1, 0, -1, 0, 1};
+for (int i = 0; i < 4; i++) {
+  int dx = x + dir[i];
+  int dy = y + dir[i + 1];
+}
+```
+
+## 9. <a name='Hashtables'></a>Hash tables
+
+## 10. <a name='UnionFind'></a>Union Find
+
+Leetcode:
+
+- 648 redundant connection
+
+整理
+
+- 一個中心：合併
+- 兩個觀念：
+  - 初始點，自己父親連自己
+  - 如果父親一樣，就是同一個 Union 的
+- 三個 Operation
+  - Find()
+  - Union()
+  - Connected() → 有沒有一樣的 parent
