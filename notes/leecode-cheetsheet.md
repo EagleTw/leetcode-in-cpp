@@ -175,6 +175,8 @@ bool sign = val & 0x8000; // sign bit
 
 ## 8. <a name='Graph'></a>Graph
 
+### Good-to-know algoritm
+
 - 移動上下左右
 
 ```cpp
@@ -182,6 +184,32 @@ int dir[] = {1, 0, -1, 0, 1};
 for (int i = 0; i < 4; i++) {
   int dx = x + dir[i];
   int dy = y + dir[i + 1];
+}
+```
+
+- Union find (略)
+
+- Topological sort
+
+Leetcode: 207 Course Schedule
+
+```cpp
+bool dfs(std::vector<std::vector<int>> &graph, std::vector<int> &state,
+         std::vector<int> &ans, int cur) {
+  if (state[cur] == 1)
+    return true;
+  else if (state[cur] == 2)
+    return false;
+
+  state[cur] = 1;
+  for (const auto &i : graph[cur]) {
+    if (dfs(graph, state, ans, i))
+      return true;
+  }
+  state[cur] = 2;
+  ans.push_back(cur);
+
+  return false;
 }
 ```
 
