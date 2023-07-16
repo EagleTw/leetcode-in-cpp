@@ -23,10 +23,13 @@ Please give me a star if you think there is something useful.
 - 6. [Back-Tracking](#Back-Tracking)
 - 7. [BFS / DFS / Flood Fill](#BFSDFSFloodFill)
 - 8. [Graph](#Graph)
-  - 8.1. [策略](#)
+  - 8.1. [矩陣圖模擬](#)
   - 8.2. [Union find (Disjoint Set)](#UnionfindDisjointSet)
   - 8.3. [Topological sort 拓樸排序](#Topologicalsort)
   - 8.4. [Minimum Spanning Trees (MST) 最小生成樹](#MinimumSpanningTreesMST)
+  - 8.5. [Shortest Path 最短路问题](#ShortestPath)
+  - 8.6. [8.6 連通性問題](#-1)
+  - 8.7. [網路流量](#-1)
 - 9. [Hash tables](#Hashtables)
 - 10. [Dynamic Programming](#DynamicProgramming)
 
@@ -197,7 +200,7 @@ Hints:
 
 ## 8. <a name='Graph'></a>Graph
 
-### 8.1. <a name=''></a>策略
+### 8.1. <a name=''></a>矩陣圖模擬
 
 - 1. DFS / BFS
 - 2. 從四邊向內出發
@@ -233,7 +236,10 @@ Leetcode: 648 redundant connection
 
 ### 8.3. <a name='Topologicalsort'></a>Topological sort 拓樸排序
 
-Leetcode: 207 Course Schedule
+Leetcode:
+
+- 207 Course Schedule
+- 329 (TODO)
 
 ```cpp
 bool dfs(std::vector<std::vector<int>> &graph, std::vector<int> &state,
@@ -258,6 +264,14 @@ bool dfs(std::vector<std::vector<int>> &graph, std::vector<int> &state,
 ### 8.4. <a name='MinimumSpanningTreesMST'></a>Minimum Spanning Trees (MST) 最小生成樹
 
 prim 算法和 kruskal 算法
+
+### 8.5. <a name='ShortestPath'></a>Shortest Path 最短路问题
+
+Dijkstra, Bellman-Ford, Floyd-Warshall
+
+### 8.6. <a name='-1'></a>8.6 連通性問題
+
+### 8.7. <a name='-1'></a>網路流量
 
 ## 9. <a name='Hashtables'></a>Hash tables
 
