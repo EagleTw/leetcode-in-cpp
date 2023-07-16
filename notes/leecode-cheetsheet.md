@@ -87,6 +87,8 @@ static inline bool compare(std::vector<int> x, std::vector<int> y) {
 
 ## 2. <a name='Linkedlist'></a>Linked list
 
+- Indirect pointer technique
+
 ## 3. <a name='BitwiseOperation'></a>Bitwise Operation
 
 [[Jserv-Bitwise-Operation]](https://hackmd.io/@sysprog/c-bitwise)
