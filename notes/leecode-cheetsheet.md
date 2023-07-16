@@ -3,8 +3,10 @@
 <!-- vscode-markdown-toc -->
 
 - 1. [Array & Two Pointer & Sliding window & Stacks](#ArrayTwoPointerSlidingwindowStacks)
-  - 1.1. [Good-to-know algorithm](#Good-to-knowalgorithm)
-    - 1.1.1. [Boyer-Moore Majority Voting Algorithm](#Boyer-MooreMajorityVotingAlgorithm)
+  - 1.1. [Good-to-know algorithm or techniques](#Good-to-knowalgorithmortechniques)
+    - 1.1.1. [Prefix sum](#Prefixsum)
+    - 1.1.2. [Counting sort](#Countingsort)
+    - 1.1.3. [Boyer-Moore Majority Voting Algorithm](#Boyer-MooreMajorityVotingAlgorithm)
 - 2. [Linked list](#Linkedlist)
 - 3. [Bitwise Operation](#BitwiseOperation)
   - 3.1. [Default need-to-know](#Defaultneed-to-know)
@@ -25,9 +27,35 @@
 
 ## 1. <a name='ArrayTwoPointerSlidingwindowStacks'></a>Array & Two Pointer & Sliding window & Stacks
 
-### 1.1. <a name='Good-to-knowalgorithm'></a>Good-to-know algorithm
+### 1.1. <a name='Good-to-knowalgorithmortechniques'></a>Good-to-know algorithm or techniques
 
-#### 1.1.1. <a name='Boyer-MooreMajorityVotingAlgorithm'></a>Boyer-Moore Majority Voting Algorithm
+#### 1.1.1. <a name='Prefixsum'></a>Prefix sum
+
+Leetcode:
+
+- 238 product of array except self
+
+#### 1.1.2. <a name='Countingsort'></a>Counting sort
+
+Leetcode:
+
+- 49. Group Anagrams
+
+```cpp
+string strSort(string s) {
+  int counter[26] = {0};
+  for (char c : s) {
+      counter[c - 'a']++;
+  }
+  string t;
+  for (int c = 0; c < 26; c++) {
+      t += string(counter[c], c + 'a');
+  }
+  return t;
+}
+```
+
+#### 1.1.3. <a name='Boyer-MooreMajorityVotingAlgorithm'></a>Boyer-Moore Majority Voting Algorithm
 
 Finding majority element -- [[YouTube]](https://www.youtube.com/watch?v=n5QY3x_GNDg&t=274s)
 
