@@ -17,8 +17,11 @@
 - 6. [Back-Tracking](#Back-Tracking)
 - 7. [BFS / DFS / Flood Fill](#BFSDFSFloodFill)
 - 8. [Graph](#Graph)
+  - 8.1. [策略](#)
+  - 8.2. [Good-to-know algoritm](#Good-to-knowalgoritm)
 - 9. [Hash tables](#Hashtables)
 - 10. [Union Find](#UnionFind)
+- 11. [Dynamic Programming](#DynamicProgramming)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -167,6 +170,11 @@ bool sign = val & 0x8000; // sign bit
   - Path
   - Distance
 
+Hints:
+
+- 遞迴 → Iteration
+  - 雙色 Stack 法：下去白色，回來灰色。**返回的時候，才做事**
+
 ## 6. <a name='Back-Tracking'></a>Back-Tracking
 
 [[Lucifer-Backtracking]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/backtrack)
@@ -175,7 +183,13 @@ bool sign = val & 0x8000; // sign bit
 
 ## 8. <a name='Graph'></a>Graph
 
-### Good-to-know algoritm
+### 8.1. <a name=''></a>策略
+
+- 1. DFS / BFS
+- 2. 從四邊向內出發
+- 3. Union find (spanning tree, redundant connection)
+
+### 8.2. <a name='Good-to-knowalgoritm'></a>Good-to-know algoritm
 
 - 移動上下左右
 
@@ -231,3 +245,5 @@ Leetcode:
   - Find()
   - Union()
   - Connected() → 有沒有一樣的 parent
+
+## 11. <a name='DynamicProgramming'></a>Dynamic Programming
