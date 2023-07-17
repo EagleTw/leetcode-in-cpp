@@ -26,7 +26,8 @@ public:
     for (const auto &sd_pair : queries) {
       const std::string &s = sd_pair.front();
       const std::string &d = sd_pair.back();
-      if (!graph.count(s) || !graph.count(d)) {
+      if (!graph.count(s) || !graph.count(d)) { // unordered_map::count
+                                                // return 1 if found elem
         ans.emplace_back(-1.0);
         continue;
       }
@@ -49,7 +50,7 @@ private:
 
     for (const auto &next : graph[src]) {
       const std::string &c = next.first;
-      if (visited.count(c))
+      if (visited.count(c)) // std::set::count, return 1 if found
         continue;
       double d = dfs(graph, visited, c, dest);
       if (d > 0)
