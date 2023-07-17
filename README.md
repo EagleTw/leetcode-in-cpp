@@ -275,4 +275,9 @@ Dijkstra, Bellman-Ford, Floyd-Warshall
 
 ## 9. <a name='Hashtables'></a>Hash tables
 
+- 2-D Hash Table 好用 (直接把 HashTable 當 Array 用)
+  - Leetcode 399. Evaluate Division
+  - `map[a][b]`
+  - `map.count(a)`, `map[a].count(b)`, ...
+
 ## 10. <a name='DynamicProgramming'></a>Dynamic Programming
