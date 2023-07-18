@@ -14,9 +14,8 @@ public:
         right = mid - 1;
       }
     }
-    const int first = right + 1; // 注意! right 為「小於 target 的最大數 index」
-    if (first >= 0 && first < nums.size() && nums[first] == target)
-      ret[0] = first;
+    if (left >= 0 && left < nums.size() && nums[left] == target)
+      ret[0] = left;
     else
       return ret;
 
@@ -24,13 +23,13 @@ public:
     right = nums.size() - 1; // left 不設為 0
     while (left <= right) {
       int mid = left + (right - left) / 2;
-      if (nums[mid] <= target) {
-        left = mid + 1;
-      } else if (nums[mid] > target) {
+      if (nums[mid] > target) {
         right = mid - 1;
+      } else if (nums[mid] <= target) {
+        left = mid + 1;
       }
     }
-    const int last = left - 1; // 注意! right 為「大於 target 的最小數 index」
+    const int last = left - 1; // 注意! left 為「大於 target 的最小數 index」
     if (last >= 0 && last < nums.size() && nums[last] == target)
       ret[1] = last;
 
