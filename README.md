@@ -166,7 +166,9 @@ bool sign = val & 0x8000; // sign bit
 [[Lucifer-二分]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/binary-search-1)
 
 - 一個中心：折半
-- 二個類型：最左插入、最右插入
+- 二個類型：
+  - 最左插入 \[1,2,2,2,3,4\] (插入 2) --> index 1
+  - 最右插入 \[1,2,2,2,3,4\] (插入 2) --> index 2
 - 三個基本概念：解空間、序列有序、極值
 - 四大應用
   - 能力檢測二分
