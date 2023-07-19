@@ -1,10 +1,11 @@
 class Solution {
- public:
-  char nextGreatestLetter(vector<char>& letters, char target) {
+public:
+  char nextGreatestLetter(vector<char> &letters, char target) {
     int left = 0;
     int right = letters.size() - 1;
 
-    if (letters[left] > target || letters[right] <= target) return letters[0];
+    if (letters[left] > target || letters[right] <= target)
+      return letters[0];
 
     while (left < right) {
       const int mid = left + (right - left) / 2;
