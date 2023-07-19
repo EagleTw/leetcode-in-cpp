@@ -1,4 +1,4 @@
-int searchInsert(int* nums, int numsSize, int target) {
+int searchInsert(int *nums, int numsSize, int target) {
   /* using divide and conquer */
   int lo = 0;
   int hi = numsSize - 1;
