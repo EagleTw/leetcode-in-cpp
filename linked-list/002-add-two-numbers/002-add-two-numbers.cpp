@@ -13,24 +13,24 @@ public:
   ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
     ListNode *p1 = l1;
     ListNode *p2 = l2;
+    ListNode *dummy = new ListNode(0);
+    ListNode *p = dummy;
+    int sum = 0;
 
-    ListNode newHead(0);
-    ListNode *p = &newHead;
-
-    int carry = 0;
-
-    while (p1 || p2 || carry) {
-      int sum = (p1 ? p1->val : 0) + (p2 ? p2->val : 0) + carry;
-      p->next = new ListNode(0);
-      p = p->next;
-
-      p->val = sum % 10;
-      carry = sum / 10;
-      if (p1)
+    while (p1 || p2 || sum) {
+      if (p1) {
+        sum += p1->val;
         p1 = p1->next;
-      if (p2)
+      }
+      if (p2) {
+        sum += p2->val;
         p2 = p2->next;
+      }
+
+      p->next = new ListNode(sum % 10);
+      p = p ->next;
+      sum /= 10;
     }
-    return newHead.next;
+    return dummy->next;
   }
 };
