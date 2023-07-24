@@ -163,19 +163,63 @@ bool sign = val & 0x8000; // sign bit
 
 ## 4. <a name='BinarySearch'></a>Binary Search
 
-[[二分搜尋法（Binary Search）完整教學（一）]](https://medium.com/appworks-school/binary-search-%E9%82%A3%E4%BA%9B%E8%97%8F%E5%9C%A8%E7%B4%B0%E7%AF%80%E8%A3%A1%E7%9A%84%E9%AD%94%E9%AC%BC-%E4%B8%80-%E5%9F%BA%E7%A4%8E%E4%BB%8B%E7%B4%B9-dd2cd804aee1)
+[[二分搜尋法（Binary Search）完整教學（一）]](https://medium.com/appworks-school/binary-search-%E9%82%A3%E4%BA%9B%E8%97%8F%E5%9C%A8%E7%B4%B0%E7%AF%80%E8%A3%A1%E7%9A%84%E9%AD%94%E9%AC%BC-%E4%B8%80-%E5%9F%BA%E7%A4%8E%E4%BB%8B%E7%B4%B9-dd2cd804aee1) \
 [[Lucifer-二分]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/binary-search-1)
 
-- 一個中心：折半
-- 二個類型：
-  - 最左插入 \[1,2,2,2,3,4\] (插入 2) --> index 1
-  - 最右插入 \[1,2,2,2,3,4\] (插入 2) --> index 2
-- 三個基本概念：解空間、序列有序、極值
-- 四大應用
-  - 能力檢測二分
-  - 前綴和二分
-  - 插入排序二分
-  - 計數二分
+My 整理
+
+- 基本型
+
+  程式碼
+
+  ```c++
+  int l = 0, r = v.size() - 1;
+  while (l <= r) {
+    const int mid = l + (r - l) / 2;
+    if (v[mid] == target) {
+      return mid;
+    } else if (v[mid] < target) {
+      r = mid - 1;
+    } else {
+      l = mid + 1;
+    }
+  }
+  ```
+
+- 找不到怎麼辦？
+
+  ```text
+  [1, 3, 5, 7, 9]  target: 4
+      ^  ^
+      r  l
+
+  // 找比 4 大的 --> l
+  // 找比 4 小的 --> r
+  ```
+
+- 重複值怎麼辦？
+
+  - 向左插入：std::lower_bound()
+
+    ```text
+    [1, 2, 2, 2, 3]  target: 2
+     ^  ^
+     r  l
+
+    // 找第一個 2 --> l
+    // 找比 2 小的最大 --> r
+    ```
+
+  - 向右插入：std::upper_bound()
+
+    ```text
+    [1, 2, 2, 2, 3]  target: 2
+              ^  ^
+              r  l
+
+    // 找第最後一個 2 --> r
+    // 找比 2 大的最小 --> l
+    ```
 
 ## 5. <a name='BinaryTree'></a>Binary Tree
 
