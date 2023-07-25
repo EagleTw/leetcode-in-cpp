@@ -18,6 +18,7 @@ Please give me a star if you think there is something useful.
     - 1.1.2. [Counting sort](#Countingsort)
     - 1.1.3. [Boyer-Moore Majority Voting Algorithm](#Boyer-MooreMajorityVotingAlgorithm)
     - 1.1.4. [Write compare function / operator / lamda](#Writecomparefunctionoperatorlamda)
+    - 1.1.5. [Ceil() without ceil](#Ceilwithoutceil)
 - 2. [Two Pointers and Sliding Window](#TwoPointersandSlidingWindow)
 - 3. [Linked list](#Linkedlist)
   - 3.1. [Indirect pointer technique](#Indirectpointertechnique)
@@ -94,6 +95,14 @@ struct compare {
 };
 ```
 
+#### 1.1.5. <a name='Ceilwithoutceil'></a>Ceil() without ceil
+
+```cpp
+double d;
+int intPart = static_cast<int> d;
+int ceil = (d > int_part) ? intPart + 1; intPart;
+```
+
 - Compare function
 
 ```cpp
@@ -108,6 +117,7 @@ static inline bool compare(std::vector<int> x, std::vector<int> y) {
 
 1. 兩邊往中間走: 戀人相遇
 2. Fast/Slow Pointers
+
    - Sliding Window: 跛腳走路
 
 3. 兩個 Pointer 速度不一樣
