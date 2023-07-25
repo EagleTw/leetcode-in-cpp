@@ -17,25 +17,26 @@ Please give me a star if you think there is something useful.
     - 1.1.2. [Counting sort](#Countingsort)
     - 1.1.3. [Boyer-Moore Majority Voting Algorithm](#Boyer-MooreMajorityVotingAlgorithm)
     - 1.1.4. [Write compare function / operator / lamda](#Writecomparefunctionoperatorlamda)
-- 2. [Linked list](#Linkedlist)
-  - 2.1. [Indirect pointer technique](#Indirectpointertechnique)
-- 3. [Bitwise Operation](#BitwiseOperation)
-  - 3.1. [Default need-to-know](#Defaultneed-to-know)
-  - 3.2. [Builtin usefull bitwise](#Builtinusefullbitwise)
-- 4. [Binary Search](#BinarySearch)
-- 5. [Binary Tree](#BinaryTree)
-- 6. [Back-Tracking](#Back-Tracking)
-- 7. [BFS / DFS / Flood Fill](#BFSDFSFloodFill)
-- 8. [Graph](#Graph)
-  - 8.1. [矩陣圖模擬](#)
-  - 8.2. [Union find (Disjoint Set)](#UnionfindDisjointSet)
-  - 8.3. [Topological sort 拓樸排序](#Topologicalsort)
-  - 8.4. [Minimum Spanning Trees (MST) 最小生成樹](#MinimumSpanningTreesMST)
-  - 8.5. [Shortest Path 最短路问题](#ShortestPath)
-  - 8.6. [8.6 連通性問題](#-1)
-  - 8.7. [網路流量](#-1)
-- 9. [Hash tables](#Hashtables)
-- 10. [Dynamic Programming](#DynamicProgramming)
+- 2. [Two Pointers and Sliding Window](#TwoPointersandSlidingWindow)
+- 3. [Linked list](#Linkedlist)
+  - 3.1. [Indirect pointer technique](#Indirectpointertechnique)
+- 4. [Bitwise Operation](#BitwiseOperation)
+  - 4.1. [Default need-to-know](#Defaultneed-to-know)
+  - 4.2. [Builtin usefull bitwise](#Builtinusefullbitwise)
+- 5. [Binary Search](#BinarySearch)
+- 6. [Binary Tree](#BinaryTree)
+- 7. [Back-Tracking](#Back-Tracking)
+- 8. [BFS / DFS / Flood Fill](#BFSDFSFloodFill)
+- 9. [Graph](#Graph)
+  - 9.1. [矩陣圖模擬](#)
+  - 9.2. [Union find (Disjoint Set)](#UnionfindDisjointSet)
+  - 9.3. [Topological sort 拓樸排序](#Topologicalsort)
+  - 9.4. [Minimum Spanning Trees (MST) 最小生成樹](#MinimumSpanningTreesMST)
+  - 9.5. [Shortest Path 最短路问题](#ShortestPath)
+  - 9.6. [8.6 連通性問題](#-1)
+  - 9.7. [網路流量](#-1)
+- 10. [Hash tables](#Hashtables)
+- 11. [Dynamic Programming](#DynamicProgramming)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -100,20 +101,30 @@ static inline bool compare(std::vector<int> x, std::vector<int> y) {
 }
 ```
 
-## 2. <a name='Linkedlist'></a>Linked list
+## 2. <a name='TwoPointersandSlidingWindow'></a>Two Pointers and Sliding Window
 
-### 2.1. <a name='Indirectpointertechnique'></a>Indirect pointer technique
+手法：
+
+1. 兩邊往中間走: 戀人相遇
+2. Fast/Slow Pointers
+   - Sliding Window: 跛腳走路
+
+3. 兩個 Pointer 速度不一樣
+
+## 3. <a name='Linkedlist'></a>Linked list
+
+### 3.1. <a name='Indirectpointertechnique'></a>Indirect pointer technique
 
 - [Jserv Linked List](https://hackmd.io/@sysprog/c-linked-list)
 
-## 3. <a name='BitwiseOperation'></a>Bitwise Operation
+## 4. <a name='BitwiseOperation'></a>Bitwise Operation
 
 Links:
 
 - [Jserv-Bitwise-Operation](https://hackmd.io/@sysprog/c-bitwise)
 - [利用 LeetCode easy 題目來精通 C++ bitwise](https://steveyang.blog/zh_tw/2022/07/02/leetcode-easy-bitwise-xor-summary/)
 
-### 3.1. <a name='Defaultneed-to-know'></a>Default need-to-know
+### 4.1. <a name='Defaultneed-to-know'></a>Default need-to-know
 
 - Set a bit
 
@@ -154,7 +165,7 @@ unsigned char left = (val >> 8) & 0xff; /* left most (most significant) byte */
 bool sign = val & 0x8000; // sign bit
 ```
 
-### 3.2. <a name='Builtinusefullbitwise'></a>Builtin usefull bitwise
+### 4.2. <a name='Builtinusefullbitwise'></a>Builtin usefull bitwise
 
 - `int __builtin_ffs (int x)` → find first set
   - Returns one plus the index of the least significant 1-bit of x, or if x is zero, returns zero.
@@ -165,7 +176,7 @@ bool sign = val & 0x8000; // sign bit
 - `int __builtin_popcount (unsigned int x)` → population count
   - Returns the number of 1-bits in x.
 
-## 4. <a name='BinarySearch'></a>Binary Search
+## 5. <a name='BinarySearch'></a>Binary Search
 
 [[二分搜尋法（Binary Search）完整教學（一）]](https://medium.com/appworks-school/binary-search-%E9%82%A3%E4%BA%9B%E8%97%8F%E5%9C%A8%E7%B4%B0%E7%AF%80%E8%A3%A1%E7%9A%84%E9%AD%94%E9%AC%BC-%E4%B8%80-%E5%9F%BA%E7%A4%8E%E4%BB%8B%E7%B4%B9-dd2cd804aee1) \
 [[Lucifer-二分]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/binary-search-1)
@@ -225,7 +236,7 @@ My 整理
     // 找比 2 大的最小 --> l
     ```
 
-## 5. <a name='BinaryTree'></a>Binary Tree
+## 6. <a name='BinaryTree'></a>Binary Tree
 
 [[Lucifer-樹]](https://github.com/azl397985856/leetcode/blob/master/thinkings/tree.md)
 
@@ -243,15 +254,15 @@ Hints:
 - 遞迴 → Iteration
   - 雙色 Stack 法：下去白色，回來灰色。**返回的時候，才做事**
 
-## 6. <a name='Back-Tracking'></a>Back-Tracking
+## 7. <a name='Back-Tracking'></a>Back-Tracking
 
 [[Lucifer-Backtracking]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/backtrack)
 
-## 7. <a name='BFSDFSFloodFill'></a>BFS / DFS / Flood Fill
+## 8. <a name='BFSDFSFloodFill'></a>BFS / DFS / Flood Fill
 
-## 8. <a name='Graph'></a>Graph
+## 9. <a name='Graph'></a>Graph
 
-### 8.1. <a name=''></a>矩陣圖模擬
+### 9.1. <a name=''></a>矩陣圖模擬
 
 - 1. DFS / BFS
 - 2. 從四邊向內出發
@@ -269,7 +280,7 @@ ps.
   }
   ```
 
-### 8.2. <a name='UnionfindDisjointSet'></a>Union find (Disjoint Set)
+### 9.2. <a name='UnionfindDisjointSet'></a>Union find (Disjoint Set)
 
 Leetcode: 648 redundant connection
 
@@ -285,7 +296,7 @@ Leetcode: 648 redundant connection
   - Union()
   - Connected() → 有沒有一樣的 parent
 
-### 8.3. <a name='Topologicalsort'></a>Topological sort 拓樸排序
+### 9.3. <a name='Topologicalsort'></a>Topological sort 拓樸排序
 
 Leetcode:
 
@@ -312,23 +323,23 @@ bool dfs(std::vector<std::vector<int>> &graph, std::vector<int> &state,
 }
 ```
 
-### 8.4. <a name='MinimumSpanningTreesMST'></a>Minimum Spanning Trees (MST) 最小生成樹
+### 9.4. <a name='MinimumSpanningTreesMST'></a>Minimum Spanning Trees (MST) 最小生成樹
 
 prim 算法和 kruskal 算法
 
-### 8.5. <a name='ShortestPath'></a>Shortest Path 最短路问题
+### 9.5. <a name='ShortestPath'></a>Shortest Path 最短路问题
 
 Dijkstra, Bellman-Ford, Floyd-Warshall
 
-### 8.6. <a name='-1'></a>8.6 連通性問題
+### 9.6. <a name='-1'></a>8.6 連通性問題
 
-### 8.7. <a name='-1'></a>網路流量
+### 9.7. <a name='-1'></a>網路流量
 
-## 9. <a name='Hashtables'></a>Hash tables
+## 10. <a name='Hashtables'></a>Hash tables
 
 - 2-D Hash Table 好用 (直接把 HashTable 當 Array 用)
   - Leetcode 399. Evaluate Division
   - `map[a][b]`
   - `map.count(a)`, `map[a].count(b)`, ...
 
-## 10. <a name='DynamicProgramming'></a>Dynamic Programming
+## 11. <a name='DynamicProgramming'></a>Dynamic Programming
