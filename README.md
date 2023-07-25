@@ -3,6 +3,7 @@
 Useful links
 
 - [GitHub - WisdomPeak](https://github.com/wisdompeak/LeetCode)
+- [Googele OA](https://leetcode.com/discuss/interview-question/352460/Google-Online-Assessment-Questions)
 
 ```text
 This is a personal note mainly in C++
