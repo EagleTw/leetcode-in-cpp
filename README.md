@@ -376,3 +376,22 @@ Dijkstra, Bellman-Ford, Floyd-Warshall
 2. 確定狀態轉移方程：找出狀態與狀態之間的遞推關係。
 3. 初始狀態和邊界情況：最簡單的子問題的結果，也是程序的出口條件 。
 4. 返回值：對於簡單問題，返回值可能就是最終狀態；對於複雜問題可能還需對最終狀態做一些額外處理。
+
+題目分類：
+
+1. Path - 路徑問題
+   - Unique Path
+   - Unique Path II (障礙物)
+   - 最小路徑和
+   - 三角形最小路徑和
+2. House Rober
+   - Fibonacci Sequence
+   - House Rober
+   - House Rober II (Circular)
+   - House Rober III (Tree)
+3. 買賣股票問題
+4. 回文串問題
+5. 子序列問題
+6. 其他問題
+
+ 
