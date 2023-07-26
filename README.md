@@ -362,7 +362,8 @@ Dijkstra, Bellman-Ford, Floyd-Warshall
 
 ## 11. <a name='DynamicProgramming'></a>Dynamic Programming
 
-[21 道 LeetCode 題解帶你搞懂動態規劃！](https://www.readfog.com/a/1661529855046553600) \
+[[21 道 LeetCode 題解帶你搞懂動態規劃！]](https://www.readfog.com/a/1661529855046553600) \
+[[告别动态规划，连刷 40 道题，我总结了这些套路，看不懂你打我（万字长文）]](https://zhuanlan.zhihu.com/p/91582909) \
 
 什麼情況可以用 DP：
 
