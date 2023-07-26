@@ -1,4 +1,7 @@
 // Space Complex: O(N^2) --> too large
+//
+// Bottom up is better:
+// https://hackmd.io/@Zero871015/LeetCode-120
 
 /* Think:
     1. Define state:
