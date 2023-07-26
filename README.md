@@ -103,6 +103,13 @@ int intPart = static_cast<int> d;
 int ceil = (d > int_part) ? intPart + 1; intPart;
 ```
 
+or
+
+```cpp
+double d;
+int ceil = static_cast<int>(d - 1) + 1;
+```
+
 - Compare function
 
 ```cpp
