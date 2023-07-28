@@ -1,4 +1,4 @@
 class Solution {
- public:
+public:
   int characterReplacement(string s, int k) {}
 };
