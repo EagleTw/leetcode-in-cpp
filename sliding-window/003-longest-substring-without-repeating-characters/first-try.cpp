@@ -1,9 +1,9 @@
 class Solution {
- public:
+public:
   int lengthOfLongestSubstring(string s) {
     int max_len = 0;
     int l = 0, r = 0;
-    std::unordered_set<char> ss;  // substring set
+    std::unordered_set<char> ss; // substring set
 
     while (r < s.size()) {
       if (ss.find(s[r]) != ss.end()) {
