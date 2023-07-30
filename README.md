@@ -19,7 +19,10 @@ Please give me a star if you think there is something useful.
     - 1.1.3. [Boyer-Moore Majority Voting Algorithm](#Boyer-MooreMajorityVotingAlgorithm)
     - 1.1.4. [Write compare function / operator / lamda](#Writecomparefunctionoperatorlamda)
     - 1.1.5. [Ceil() without ceil](#Ceilwithoutceil)
+    - 1.1.6. [Quick Select - Find the Kth Smallest Element](#QuickSelect-FindtheKthSmallestElement)
 - 2. [Two Pointers and Sliding Window](#TwoPointersandSlidingWindow)
+  - 2.1. [基本手法](#)
+  - 2.2. [FAANG - Sliding Window Questions](#FAANG-SlidingWindowQuestions)
 - 3. [Linked list](#Linkedlist)
   - 3.1. [Indirect pointer technique](#Indirectpointertechnique)
 - 4. [Bitwise Operation](#BitwiseOperation)
@@ -30,7 +33,7 @@ Please give me a star if you think there is something useful.
 - 7. [Back-Tracking](#Back-Tracking)
 - 8. [BFS / DFS / Flood Fill](#BFSDFSFloodFill)
 - 9. [Graph](#Graph)
-  - 9.1. [矩陣圖模擬](#)
+  - 9.1. [矩陣圖模擬](#-1)
   - 9.2. [Union find (Disjoint Set)](#UnionfindDisjointSet)
   - 9.3. [Topological sort 拓樸排序](#Topologicalsort)
   - 9.4. [Minimum Spanning Trees (MST) 最小生成樹](#MinimumSpanningTreesMST)
@@ -118,21 +121,50 @@ static inline bool compare(std::vector<int> x, std::vector<int> y) {
 }
 ```
 
+#### 1.1.6. <a name='QuickSelect-FindtheKthSmallestElement'></a>Quick Select - Find the Kth Smallest Element
+
+為 Quick Sort 的變型。
+Pseudo Code:
+
+```text
+//This is an O(n) algorithm (linear)
+
+Given an array A, of size n:
+
+1. Pick a random index, p, as the pivot
+2. Iterate through the array, comparing every element e to p, and counting the total number of elements before p
+    a. if e < p, move e to the left of p
+    b. if e > p, move e to the right of p
+    c. if e == p, leave e where it is
+3. count the number of elements before p
+4. if k < p, recurse on a[0...p-1]
+   if k > p, recurse on a[p+1...n]
+   uf k == p, return p
+```
+
 ## 2. <a name='TwoPointersandSlidingWindow'></a>Two Pointers and Sliding Window
 
-手法：
+### 2.1. <a name=''></a>基本手法
 
 1. 兩邊往中間走: 戀人相遇
 2. Fast/Slow Pointers
 
-   - Sliding Window: 跛腳走路
+- a. Sliding Window: 跛腳走路
 
-3. 兩個 Pointer 速度不一樣
+  ```cpp
+  int l = 0, r = 0;
+  while (l < r) {
+    r++;
+    while (condition) {
+      l++;
+    }
+    update_answer(); // max or min
+  }
+  ```
 
+- b. 兩個 Pointer 速度不一樣
 
-FAANG:
-
-Sliding Window Questions :
+### 2.2. <a name='FAANG-SlidingWindowQuestions'></a>FAANG - Sliding Window Questions
 
 - [Average of any contiguous subarray of size k](https://leetcode.com/problems/maximum-average-subarray-i/)
 - [Maximum sum of any contiguous subarray of size k](https://leetcode.com/problems/maximum-subarray/)
@@ -214,9 +246,9 @@ bool sign = val & 0x8000; // sign bit
 [[二分搜尋法（Binary Search）完整教學（一）]](https://medium.com/appworks-school/binary-search-%E9%82%A3%E4%BA%9B%E8%97%8F%E5%9C%A8%E7%B4%B0%E7%AF%80%E8%A3%A1%E7%9A%84%E9%AD%94%E9%AC%BC-%E4%B8%80-%E5%9F%BA%E7%A4%8E%E4%BB%8B%E7%B4%B9-dd2cd804aee1) \
 [[Lucifer-二分]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/binary-search-1)
 
-My 整理
+### ypaskell 整理
 
-- 基本型
+- 1. 基本型
 
   程式碼
 
@@ -234,7 +266,7 @@ My 整理
   }
   ```
 
-- 找不到怎麼辦？
+- 2. 找不到怎麼辦？
 
   ```text
   [1, 3, 5, 7, 9]  target: 4
@@ -245,7 +277,7 @@ My 整理
   // 找比 4 小的 --> r
   ```
 
-- 重複值怎麼辦？
+- 3. 重複值怎麼辦？ (bool 能力二分法屬於這種)
 
   - 向左插入：std::lower_bound()
 
@@ -295,7 +327,7 @@ Hints:
 
 ## 9. <a name='Graph'></a>Graph
 
-### 9.1. <a name=''></a>矩陣圖模擬
+### 9.1. <a name='-1'></a>矩陣圖模擬
 
 - 1. DFS / BFS
 - 2. 從四邊向內出發
@@ -409,5 +441,3 @@ Dijkstra, Bellman-Ford, Floyd-Warshall
 4. 回文串問題
 5. 子序列問題
 6. 其他問題
-
- 
