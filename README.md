@@ -350,6 +350,18 @@ Hints:
 
 [[Lucifer-Backtracking]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/backtrack)
 
+### Review 複習題目
+
+- Subset
+- Subset II (Contains duplicate)
+  > 多加 `if (j > i && nums[j] == nums[j - 1]) continue`
+- Permutation
+  > `swap()`
+- Combination sum
+  > `超過 sum 就不用做`
+- Combination sum II (Contains duplicate)
+- Grid word search
+
 ## 8. <a name='BFSDFSFloodFill'></a>BFS / DFS / Flood Fill
 
 ## 9. <a name='Graph'></a>Graph
