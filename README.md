@@ -29,7 +29,10 @@ Please give me a star if you think there is something useful.
   - 4.1. [Default need-to-know](#Defaultneed-to-know)
   - 4.2. [Builtin usefull bitwise](#Builtinusefullbitwise)
 - 5. [Binary Search](#BinarySearch)
+  - 5.1. [ypaskell 整理](#ypaskell)
 - 6. [Binary Tree](#BinaryTree)
+  - 6.1. [觀念 Concept](#Concept)
+  - 6.2. [Review 複習題目](#Review)
 - 7. [Back-Tracking](#Back-Tracking)
 - 8. [BFS / DFS / Flood Fill](#BFSDFSFloodFill)
 - 9. [Graph](#Graph)
@@ -246,7 +249,7 @@ bool sign = val & 0x8000; // sign bit
 [[二分搜尋法（Binary Search）完整教學（一）]](https://medium.com/appworks-school/binary-search-%E9%82%A3%E4%BA%9B%E8%97%8F%E5%9C%A8%E7%B4%B0%E7%AF%80%E8%A3%A1%E7%9A%84%E9%AD%94%E9%AC%BC-%E4%B8%80-%E5%9F%BA%E7%A4%8E%E4%BB%8B%E7%B4%B9-dd2cd804aee1) \
 [[Lucifer-二分]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/binary-search-1)
 
-### ypaskell 整理
+### 5.1. <a name='ypaskell'></a>ypaskell 整理
 
 - 1. 基本型
 
@@ -303,6 +306,10 @@ bool sign = val & 0x8000; // sign bit
 
 ## 6. <a name='BinaryTree'></a>Binary Tree
 
+DiaI
+
+### 6.1. <a name='Concept'></a>觀念 Concept
+
 [[Lucifer-樹]](https://github.com/azl397985856/leetcode/blob/master/thinkings/tree.md)
 
 - 一個中心：樹的 Traverse
@@ -317,7 +324,27 @@ bool sign = val & 0x8000; // sign bit
 Hints:
 
 - 遞迴 → Iteration
-  - 雙色 Stack 法：下去白色，回來灰色。**返回的時候，才做事**
+  - 雙色 Stack 法：**返回的時候，才做事**, 下去白色，回來灰色。
+
+### 6.2. <a name='Review'></a>Review 複習題目
+
+- Basic
+  - Depth
+  - Diameter
+    > 合併 Depth 和 max_diameter 在遞迴裡
+  - Left right child swap
+  - Is Same Tree
+  - Contains subtree
+- Middle
+  - Lowest common ancestor of BST
+  - Level order traversal
+  - Right side view
+  - Valid BST
+    > 所有 left subtree node 都小於 root node
+  - (\*\*\*) Kth smallest element in BST
+    > Inorder traverse in while loop(雙色法), 到最左最下面開始數，數到 K 就停
+  - (\*\*\*) Construct binary tree
+    > 抓 Pivot 當 root，切左右當子樹）
 
 ## 7. <a name='Back-Tracking'></a>Back-Tracking
 
