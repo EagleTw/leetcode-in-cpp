@@ -149,6 +149,8 @@ Given an array A, of size n:
 
 ### 2.1. <a name=''></a>基本手法
 
+核心觀念：每一個 for/while 的一回合，Update 一次資訊
+
 1. 兩邊往中間走: 戀人相遇
 2. Fast/Slow Pointers
 
@@ -166,6 +168,27 @@ Given an array A, of size n:
   ```
 
 - b. 兩個 Pointer 速度不一樣
+
+### Review 整理
+
+#### Two Pointer
+
+- 125-valid-palindrome
+- 011-contain-with-most-water
+  > 左右比高低，把低的換掉（短板理論）
+- 167-two-sum-ii-input-array-is-sorted
+- 015-three-sum
+  > FOR + two sum
+- 283-move-zeros
+- (\*\*\*)075-sort-colors
+- 027-remove-element
+- 026-remove-duplicates-from-sorted-array
+- 080-remove-duplicates-from-sorted-array-ii
+- 056-merge-intervals
+  > 不要使用 `erase()`, inplace 不一定都是最好的
+- 057-insert-interval
+
+#### Sliding window
 
 ### 2.2. <a name='FAANG-SlidingWindowQuestions'></a>FAANG - Sliding Window Questions
 
@@ -479,4 +502,6 @@ Dijkstra, Bellman-Ford, Floyd-Warshall
 3. 買賣股票問題
 4. 回文串問題
 5. 子序列問題
-6. 其他問題
+6. 0/1 背包問題
+7. 無限背包問題
+8. 其他問題
