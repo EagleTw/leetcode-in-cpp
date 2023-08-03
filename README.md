@@ -22,7 +22,10 @@ Please give me a star if you think there is something useful.
     - 1.1.6. [Quick Select - Find the Kth Smallest Element](#QuickSelect-FindtheKthSmallestElement)
 - 2. [Two Pointers and Sliding Window](#TwoPointersandSlidingWindow)
   - 2.1. [基本手法](#)
-  - 2.2. [FAANG - Sliding Window Questions](#FAANG-SlidingWindowQuestions)
+  - 2.2. [Review 整理](#Review)
+    - 2.2.1. [Two Pointer](#TwoPointer)
+    - 2.2.2. [Sliding window](#Slidingwindow)
+  - 2.3. [FAANG - Sliding Window Questions](#FAANG-SlidingWindowQuestions)
 - 3. [Linked list](#Linkedlist)
   - 3.1. [Indirect pointer technique](#Indirectpointertechnique)
 - 4. [Bitwise Operation](#BitwiseOperation)
@@ -32,13 +35,17 @@ Please give me a star if you think there is something useful.
   - 5.1. [ypaskell 整理](#ypaskell)
 - 6. [Binary Tree](#BinaryTree)
   - 6.1. [觀念 Concept](#Concept)
-  - 6.2. [Review 複習題目](#Review)
+  - 6.2. [Review 複習題目](#Review-1)
 - 7. [Back-Tracking](#Back-Tracking)
+  - 7.1. [Review 複習題目](#Review-1)
 - 8. [BFS / DFS / Flood Fill](#BFSDFSFloodFill)
 - 9. [Graph](#Graph)
   - 9.1. [矩陣圖模擬](#-1)
+    - 9.1.1. [Review 整理](#Review-1)
   - 9.2. [Union find (Disjoint Set)](#UnionfindDisjointSet)
+    - 9.2.1. [Review 整理](#Review-1)
   - 9.3. [Topological sort 拓樸排序](#Topologicalsort)
+    - 9.3.1. [Review 整理](#Review-1)
   - 9.4. [Minimum Spanning Trees (MST) 最小生成樹](#MinimumSpanningTreesMST)
   - 9.5. [Shortest Path 最短路问题](#ShortestPath)
   - 9.6. [8.6 連通性問題](#-1)
@@ -169,9 +176,9 @@ Given an array A, of size n:
 
 - b. 兩個 Pointer 速度不一樣
 
-### Review 整理
+### 2.2. <a name='Review'></a>Review 整理
 
-#### Two Pointer
+#### 2.2.1. <a name='TwoPointer'></a>Two Pointer
 
 - 125-valid-palindrome
 - 011-contain-with-most-water
@@ -188,9 +195,21 @@ Given an array A, of size n:
   > 不要使用 `erase()`, inplace 不一定都是最好的
 - 057-insert-interval
 
-#### Sliding window
+#### 2.2.2. <a name='Slidingwindow'></a>Sliding window
 
-### 2.2. <a name='FAANG-SlidingWindowQuestions'></a>FAANG - Sliding Window Questions
+- 003-longest-substring-without-repeating-characters
+- 053-maximum-subarray
+- 076-minimum-window-substring
+- 121-best-time-to-buy-and-sell-stock
+- 209-minimum-size-subarray-sum
+- 424-longest-repeating-character-replacement
+- 567-permutation-in-string
+- 643-maximum-average-subarray-I
+- 2779-maximum-beauty-of-an-array-after-applying-operation
+- 2780-minimum-index-of-a-valid-split
+- 2799-count-complete-subarrays-in-an-array
+
+### 2.3. <a name='FAANG-SlidingWindowQuestions'></a>FAANG - Sliding Window Questions
 
 - [Average of any contiguous subarray of size k](https://leetcode.com/problems/maximum-average-subarray-i/)
 - [Maximum sum of any contiguous subarray of size k](https://leetcode.com/problems/maximum-subarray/)
@@ -349,7 +368,7 @@ Hints:
 - 遞迴 → Iteration
   - 雙色 Stack 法：**返回的時候，才做事**, 下去白色，回來灰色。
 
-### 6.2. <a name='Review'></a>Review 複習題目
+### 6.2. <a name='Review-1'></a>Review 複習題目
 
 - Basic
   - Depth
@@ -373,7 +392,7 @@ Hints:
 
 [[Lucifer-Backtracking]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/backtrack)
 
-### Review 複習題目
+### 7.1. <a name='Review-1'></a>Review 複習題目
 
 - Subset
 - Subset II (Contains duplicate)
@@ -407,9 +426,27 @@ ps.
   }
   ```
 
+#### 9.1.1. <a name='Review-1'></a>Review 整理
+
+- 130-surrounded-regions
+- 200-number-of-islands
+- 399-evaluate-division
+- 417-pacific-atlantic-water-flow
+- 463-island-perimeter
+- 684-redundant-connection
+- 695-max-area-of-island
+- 733-flood-fill
+- 994-rotting-oranges
+- 797-all-path-from-source-to-destination
+- 997-find-the-town-judge
+
+- 133-clone-graph
+
 ### 9.2. <a name='UnionfindDisjointSet'></a>Union find (Disjoint Set)
 
-Leetcode: 648 redundant connection
+#### 9.2.1. <a name='Review-1'></a>Review 整理
+
+- 648 redundant connection
 
 整理
 
@@ -425,12 +462,16 @@ Leetcode: 648 redundant connection
 
 ### 9.3. <a name='Topologicalsort'></a>Topological sort 拓樸排序
 
-Leetcode:
+#### 9.3.1. <a name='Review-1'></a>Review 整理
 
-- 207 Course Schedule
+- 207-course-schedule
+- 210-course-schedule-ii
 - 329 (TODO)
 
 ```cpp
+// state 0: not found
+// state 1: visting
+// state 2: visited
 bool dfs(std::vector<std::vector<int>> &graph, std::vector<int> &state,
          std::vector<int> &ans, int cur) {
   if (state[cur] == 1)
