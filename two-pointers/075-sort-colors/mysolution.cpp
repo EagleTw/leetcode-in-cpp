@@ -1,3 +1,22 @@
+/*
+Example: [2, 0, 1]
+
+1.
+[2, 0, 1]
+ ^     ^
+ l,cur r
+
+2.
+[1, 0, 2]
+ ^  ^  ^ -> r
+ l  cur
+
+3.
+[0, 1, 2]
+    ^  ^
+    l  r, cur
+*/
+
 #include <vector>
 class Solution {
 public:
