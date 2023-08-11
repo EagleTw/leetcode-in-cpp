@@ -15,8 +15,8 @@ public:
       auto it_l = hash.find(num - 1);
       auto it_r = hash.find(num + 1);
 
-      int l = (it_l != hash.end()? it_l->second : 0);
-      int r = (it_r != hash.end()? it_r->second : 0);
+      int l = (it_l != hash.end() ? it_l->second : 0);
+      int r = (it_r != hash.end() ? it_r->second : 0);
       int tmp = l + r + 1;
 
       hash[num] = hash[num - l] = hash[num + r] = tmp;
