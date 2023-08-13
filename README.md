@@ -12,7 +12,7 @@ Please give me a star if you think there is something useful.
 
 <!-- vscode-markdown-toc -->
 
-- 1. [Array & Two Pointer & Sliding window & Stacks](#ArrayTwoPointerSlidingwindowStacks)
+- 1. [Array & Stacks](#ArrayStacks)
   - 1.1. [Good-to-know algorithm or techniques](#Good-to-knowalgorithmortechniques)
     - 1.1.1. [Prefix sum](#Prefixsum)
     - 1.1.2. [Counting sort](#Countingsort)
@@ -59,7 +59,7 @@ Please give me a star if you think there is something useful.
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
-## 1. <a name='ArrayTwoPointerSlidingwindowStacks'></a>Array & Two Pointer & Sliding window & Stacks
+## 1. <a name='ArrayStacks'></a>Array & Stacks
 
 ### 1.1. <a name='Good-to-knowalgorithmortechniques'></a>Good-to-know algorithm or techniques
 
@@ -107,6 +107,12 @@ struct compare {
   }
 };
 ```
+
+#### Monotonic Stack
+
+[[Lucifer-單調棧]](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/monotone-stack)
+
+TODO
 
 #### 1.1.5. <a name='Ceilwithoutceil'></a>Ceil() without ceil
 
